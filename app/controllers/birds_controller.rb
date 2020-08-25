@@ -9,3 +9,6 @@ class BirdsController < ApplicationController
     render json: bird
   end
 end
+
+#No need for instance variables anymore, since we're immediately rendering birds and bird to JSON and are not going to be using ERB.
+
