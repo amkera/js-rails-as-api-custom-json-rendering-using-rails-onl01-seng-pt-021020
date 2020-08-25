@@ -12,8 +12,8 @@ class BirdsController < ApplicationController
   def show
     bird = Bird.find_by(id: params[:id])
     #render json: bird
-    #render json: {id: bird.id, name: bird.name, species: bird.species } 
-    render json: bird.slice(:id, :name, :species)
+    render json: {id: bird.id, name: bird.name, species: bird.species } 
+    #OR: render json: bird.slice(:id, :name, :species)
     #Rather than having to spell out each key, the Hash slice method returns a new hash with only the keys that are passed into slice
     #While slice works fine for a single hash, as with bird, it won't work for an array of hashes like the one we have in our index action:
     
