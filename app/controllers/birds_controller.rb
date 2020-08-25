@@ -2,6 +2,7 @@ class BirdsController < ApplicationController
   def index
     birds = Bird.all
     render json: birds, only: [:id, :name, :species]
+    #While slice works fine for a single hash, as with bird, it won't work for an array of hashes like the one we have in our index action.
     
   end
  
