@@ -10,6 +10,7 @@ class BirdsController < ApplicationController
     render json: {id: bird.id, name: bird.name, species: bird.species } 
     #OR: render json: bird.slice(:id, :name, :species)
     #Rather than having to spell out each key, the Hash slice method returns a new hash with only the keys that are passed into slice
+    
   end
 end
 #can pick and choose what you'd like to send 
